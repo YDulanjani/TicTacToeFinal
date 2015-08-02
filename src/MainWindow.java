@@ -14,6 +14,8 @@ import java.awt.event.ActionEvent;
 
 
 public class MainWindow extends JFrame {
+	
+	private static Logger logger =logger.;
 
 	private JPanel contentPane;
 	

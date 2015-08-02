@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 
 public class MainWindow extends JFrame {
 	
-	private static Logger logger =logger.;
+	//private static Logger logger =logger.;
 
 	private JPanel contentPane;
 	
@@ -26,6 +26,7 @@ public class MainWindow extends JFrame {
 	
 	private int status=1;
 	
+	private int mode;
 	
 	int row=0,clm=0,rowVal=0,clmVal=0,dia=0,diaVal=0,diaNo=0;
    // int row1[]=new int[3],clm1[]=new int[3];
@@ -39,7 +40,7 @@ public class MainWindow extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainWindow frame = new MainWindow();
+					MainWindow frame = new MainWindow("A","Computer",1);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,7 +52,10 @@ public class MainWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainWindow() {
+	public MainWindow(String player1,String player2,int state) {
+		this.player1=player1;
+		this.player2=player2;
+		mode=state;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 650, 450);
 		contentPane = new JPanel();

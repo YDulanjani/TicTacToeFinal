@@ -143,7 +143,7 @@ public class PlayerInfo extends JFrame {
 				}else{
 					JOptionPane.showMessageDialog(null,"Alredy Have a account "+txtPlayer2.getText()+".If You are a new user please change the name");
 				}
-				new MainWindow(txtPlayer1.getText(),txtPlayer2.getText());
+				new MainWindow(txtPlayer1.getText(),txtPlayer2.getText(),state);
 			}
 			
 			

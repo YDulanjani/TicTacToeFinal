@@ -1,7 +1,12 @@
+
 package other;
+
+
+import org.apache.log4j.Logger;
 
 public class Player {
 	
+	public static Logger logger = Logger.getLogger(Player.class);
 	
 	private String name;
 	private int won;
@@ -26,6 +31,7 @@ public class Player {
 		this.won = won;
 		this.lost = lost;
 		this.draw = draw;
+		logger.debug("New player"+ name +"has been created");
 	}
 
 

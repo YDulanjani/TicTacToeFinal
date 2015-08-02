@@ -30,6 +30,8 @@ public class PlayerInfo extends JFrame {
 	private JTextField txtPlayer2;
 	
 	
+	
+	
 	private int state;
 
 	/**
@@ -64,6 +66,8 @@ public class PlayerInfo extends JFrame {
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				startGame();
+				dispose();
+				
 			}
 
 		});

@@ -1,6 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.net.ssl.SSLEngineResult.Status;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -13,10 +14,14 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
+import other.Player;
+import other.QueryExecutor;
+
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.sql.SQLException;
 
 
 public class PlayerInfo extends JFrame {
@@ -124,7 +129,29 @@ public class PlayerInfo extends JFrame {
 	}
 	
 	private void startGame() {
-		
+		try {
+			
+			if(QueryExecutor.searchPlayer(txtPlayer1.getText()) == null){
+				QueryExecutor.addPlayer(new Player(txtPlayer1.getText()));
+			}else{
+				JOptionPane.showMessageDialog(null,"Alredy Have a account "+txtPlayer1.getText()+".If You are a new user please change the name");
+			}
+			if(state == 2){
+				if(QueryExecutor.searchPlayer(txtPlayer2.getText()) == null){
+					QueryExecutor.addPlayer(new Player(txtPlayer2.getText()));
+					
+				}else{
+					JOptionPane.showMessageDialog(null,"Alredy Have a account "+txtPlayer2.getText()+".If You are a new user please change the name");
+				}
+				new MainWindow(txtPlayer1.getText(),txtPlayer2.getText());
+			}
+			
+			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 }

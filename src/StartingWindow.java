@@ -55,6 +55,11 @@ public class StartingWindow extends JFrame {
 		contentPane.add(btnPlayer_1);
 		
 		JButton btnPlayer2 = new JButton("2 player");
+		btnPlayer2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new PlayerInfo(2).setVisible(true);
+			}
+		});
 		btnPlayer2.setBounds(59, 279, 183, 43);
 		contentPane.add(btnPlayer2);
 		

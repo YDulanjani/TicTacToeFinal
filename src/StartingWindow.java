@@ -9,6 +9,8 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 
 public class StartingWindow extends JFrame {
@@ -43,6 +45,12 @@ public class StartingWindow extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnPlayer_1 = new JButton("1 player");
+		btnPlayer_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				new PlayerInfo(1).setVisible(true);;
+				
+			}
+		});
 		btnPlayer_1.setBounds(60, 199, 183, 43);
 		contentPane.add(btnPlayer_1);
 		

@@ -1,6 +1,5 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.net.ssl.SSLEngineResult.Status;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -9,11 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
 import java.awt.Font;
-
 import javax.swing.JButton;
-
 import other.Player;
 import other.QueryExecutor;
 
@@ -22,9 +18,12 @@ import java.awt.event.FocusEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.SQLException;
+import org.apache.log4j.Logger;
 
 
 public class PlayerInfo extends JFrame {
+	
+	public static Logger logger = Logger.getLogger(PlayerInfo.class);
 
 	private JPanel contentPane;
 	private JTextField txtPlayer1;
@@ -133,17 +132,21 @@ public class PlayerInfo extends JFrame {
 			
 			if(QueryExecutor.searchPlayer(txtPlayer1.getText()) == null){
 				QueryExecutor.addPlayer(new Player(txtPlayer1.getText()));
-				new MainWindow(txtPlayer1.getText(),"Computer",state).setVisible(true);;
+			    new MainWindow(txtPlayer1.getText(),"Computer",state).setVisible(true);
+			    logger.debug("New player has added to the database" );
 			}else{
 				JOptionPane.showMessageDialog(null,"Alredy Have a account "+txtPlayer1.getText()+".If You are a new user please change the name");
 				new MainWindow(txtPlayer1.getText(),"Computer",state).setVisible(true);
+				logger.debug("Player who has already played the game going to play again" );
 			}
 			if(state == 2){
 				if(QueryExecutor.searchPlayer(txtPlayer2.getText()) == null){
 					QueryExecutor.addPlayer(new Player(txtPlayer2.getText()));
+					logger.debug("New player has added to the database" );
 					
 				}else{
 					JOptionPane.showMessageDialog(null,"Alredy Have a account "+txtPlayer2.getText()+".If You are a new user please change the name");
+					logger.debug("Player who has already played the game going to play again" );
 				}
 				new MainWindow(txtPlayer1.getText(),txtPlayer2.getText(),state).setVisible(true);
 			}
@@ -153,6 +156,7 @@ public class PlayerInfo extends JFrame {
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			logger.debug(e+"has occured");
 		}
 		
 	}

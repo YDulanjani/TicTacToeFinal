@@ -6,16 +6,22 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+
 import java.awt.Color;
 import java.awt.Font;
+
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+import org.apache.log4j.Logger;
 
 
 public class StartingWindow extends JFrame {
 
 	private JPanel contentPane;
+	public static Logger logger = Logger.getLogger(StartingWindow.class);
 
 	/**
 	 * Launch the application.
@@ -26,8 +32,10 @@ public class StartingWindow extends JFrame {
 				try {
 					StartingWindow frame = new StartingWindow();
 					frame.setVisible(true);
+					logger.debug("Game starting window opened");
 				} catch (Exception e) {
 					e.printStackTrace();
+					logger.debug(e+"has occured while trying to open the stating window");
 				}
 			}
 		});
@@ -77,6 +85,7 @@ public class StartingWindow extends JFrame {
 		startingWindowLabel.setIcon(new ImageIcon(StartingWindow.class.getResource("/img/StartWindow.jpg")));
 		startingWindowLabel.setBounds(0, 0, 684, 461);
 		contentPane.add(startingWindowLabel);
+		
 		
 		
 	}

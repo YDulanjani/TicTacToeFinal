@@ -198,11 +198,12 @@ public class MainWindow extends JFrame {
 				cells[0][0].setValue(status);
 				//btn1_1.setText(status+"//");
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -228,11 +229,12 @@ public class MainWindow extends JFrame {
 				cells[0][1].setValue(status);
 				//btn1_2.setText(status+"//");
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -258,11 +260,12 @@ public class MainWindow extends JFrame {
 				cells[0][2].setValue(status);
 				//btn1_3.setText(status+"//");
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -290,11 +293,12 @@ public class MainWindow extends JFrame {
 				cells[1][0].setStatus(true);
 				cells[1][0].setValue(status);
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -319,11 +323,12 @@ public class MainWindow extends JFrame {
 				cells[1][1].setStatus(true);
 				cells[1][1].setValue(status);
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -346,11 +351,12 @@ public class MainWindow extends JFrame {
 				cells[1][2].setStatus(true);
 				cells[1][2].setValue(status);
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -375,9 +381,12 @@ public class MainWindow extends JFrame {
 				cells[2][0].setStatus(true);
 				cells[2][0].setValue(status);
 				if(mode!=2){
+					
+					btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 					checkCells();
 					setComputerValue();
-					btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 				}else{
 					if(status==1){
 						btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -429,9 +438,10 @@ public class MainWindow extends JFrame {
 				cells[2][2].setStatus(true);
 				cells[2][2].setValue(status);
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
 				}else{

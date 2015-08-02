@@ -3,14 +3,18 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import other.Cell;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 
 public class MainWindow extends JFrame {
@@ -92,14 +96,23 @@ public class MainWindow extends JFrame {
 		contentPane.add(btn1_3);
 		
 		JButton btn1_2 = new JButton("");
-		
+		btn1_2.setBackground(Color.WHITE);
+		btn1_2.setContentAreaFilled(false);
+		btn1_2.setFocusPainted(false);
+		Border emptyBorder = BorderFactory.createEmptyBorder();
+		btn1_2.setBorder(emptyBorder);
 		
 		btn1_2.setBounds(271, 100, 83, 59);
 		contentPane.add(btn1_2);
 		
 		JButton btn1_1 = new JButton("");
+		btn1_1.setBackground(Color.WHITE);
+		btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 		
-		
+		btn1_1.setBackground(Color.WHITE);
+		btn1_1.setContentAreaFilled(false);
+		btn1_1.setFocusPainted(false);
+		btn1_1.setBorder(emptyBorder);
 		
 		
 		

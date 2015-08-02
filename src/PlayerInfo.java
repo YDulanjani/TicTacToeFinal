@@ -133,8 +133,10 @@ public class PlayerInfo extends JFrame {
 			
 			if(QueryExecutor.searchPlayer(txtPlayer1.getText()) == null){
 				QueryExecutor.addPlayer(new Player(txtPlayer1.getText()));
+				new MainWindow(txtPlayer1.getText(),"Computer",state).setVisible(true);;
 			}else{
 				JOptionPane.showMessageDialog(null,"Alredy Have a account "+txtPlayer1.getText()+".If You are a new user please change the name");
+				new MainWindow(txtPlayer1.getText(),"Computer",state).setVisible(true);
 			}
 			if(state == 2){
 				if(QueryExecutor.searchPlayer(txtPlayer2.getText()) == null){
@@ -143,7 +145,7 @@ public class PlayerInfo extends JFrame {
 				}else{
 					JOptionPane.showMessageDialog(null,"Alredy Have a account "+txtPlayer2.getText()+".If You are a new user please change the name");
 				}
-				new MainWindow(txtPlayer1.getText(),txtPlayer2.getText(),state);
+				new MainWindow(txtPlayer1.getText(),txtPlayer2.getText(),state).setVisible(true);
 			}
 			
 			

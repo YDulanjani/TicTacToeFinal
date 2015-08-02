@@ -15,6 +15,7 @@ import other.Cell;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import java.awt.Font;
 
 
 public class MainWindow extends JFrame {
@@ -66,6 +67,19 @@ public class MainWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblPlayer2 = new JLabel("Player 2");
+		lblPlayer2.setEnabled(false);
+		lblPlayer2.setForeground(new Color(0, 0, 139));
+		lblPlayer2.setFont(new Font("Snap ITC", Font.BOLD, 30));
+		lblPlayer2.setBounds(449, 5, 175, 53);
+		contentPane.add(lblPlayer2);
+		
+		JLabel lblPlayer1 = new JLabel("Player 1");
+		lblPlayer1.setForeground(new Color(255, 69, 0));
+		lblPlayer1.setFont(new Font("Snap ITC", Font.BOLD, 30));
+		lblPlayer1.setBounds(5, 5, 175, 53);
+		contentPane.add(lblPlayer1);
 		
 		JButton btn3_3 = new JButton("");
 		btn3_3.setBounds(380, 264, 83, 59);
@@ -187,11 +201,17 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -211,11 +231,17 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -235,11 +261,18 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
+						
 					}
 					status=(status==1?-1:1);
 				}
@@ -260,11 +293,17 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -283,11 +322,17 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -304,11 +349,17 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -330,8 +381,12 @@ public class MainWindow extends JFrame {
 				}else{
 					if(status==1){
 						btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -349,11 +404,17 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -371,11 +432,17 @@ public class MainWindow extends JFrame {
 					checkCells();
 					setComputerValue();
 					btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					lblPlayer1.setEnabled(false);
+					lblPlayer2.setEnabled(true);
 				}else{
 					if(status==1){
 						btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+						lblPlayer1.setEnabled(false);
+						lblPlayer2.setEnabled(true);
 					}else{
 						btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+						lblPlayer1.setEnabled(true);
+						lblPlayer2.setEnabled(false);
 					}
 					status=(status==1?-1:1);
 				}
@@ -656,5 +723,4 @@ public class MainWindow extends JFrame {
 	        return false;
 	        
 	}
-
 }

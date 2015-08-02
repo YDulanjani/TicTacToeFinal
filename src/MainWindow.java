@@ -253,7 +253,7 @@ public class MainWindow extends JFrame {
 		
 		
 		JLabel lblMainWindow = new JLabel("");
-		lblMainWindow.setIcon(new ImageIcon(MainWindow.class.getResource("/Images/A.jpg")));
+		lblMainWindow.setIcon(new ImageIcon(MainWindow.class.getResource("/img/A.jpg")));
 		lblMainWindow.setBounds(5, 5, 624, 401);
 		//lblNewLabel.setIcon(new ImageIcon(MainWindow.class.getResource("/Images/MainWindow.jpg")));
 		//lblNewLabel.setIcon(new ImageIcon(MainWindow.class.getResource("/Images/MainWindow.jpg")));

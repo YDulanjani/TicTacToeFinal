@@ -114,7 +114,7 @@ public class PlayerInfo extends JFrame {
 		contentPane.add(lblPlayer1);
 		
 		JLabel lblPlayerInfo = new JLabel("");
-		lblPlayerInfo.setIcon(new ImageIcon(PlayerInfo.class.getResource("/Images/playerInfo.jpg")));
+		lblPlayerInfo.setIcon(new ImageIcon(PlayerInfo.class.getResource("/img/playerInfo.jpg")));
 		lblPlayerInfo.setBounds(0, 0, 584, 267);
 		contentPane.add(lblPlayerInfo);
 		

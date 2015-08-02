@@ -74,7 +74,7 @@ public class StartingWindow extends JFrame {
 		contentPane.add(gameNameLabel);
 		
 		JLabel startingWindowLabel = new JLabel("");
-		startingWindowLabel.setIcon(null);
+		startingWindowLabel.setIcon(new ImageIcon(StartingWindow.class.getResource("/img/StartWindow.jpg")));
 		startingWindowLabel.setBounds(0, 0, 684, 461);
 		contentPane.add(startingWindowLabel);
 		

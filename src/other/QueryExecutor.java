@@ -10,6 +10,7 @@ import java.util.List;
 
 
 public class QueryExecutor {
+	//test
 
 	public static int addPlayer(Player player) throws ClassNotFoundException, SQLException{
 		int result=0;

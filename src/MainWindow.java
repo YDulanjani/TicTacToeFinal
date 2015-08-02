@@ -33,6 +33,9 @@ public class MainWindow extends JFrame {
 	
 	private int mode;
 	
+	private JLabel lblPlayer1;
+	private JLabel lblPlayer2;
+	
 	int row=0,clm=0,rowVal=0,clmVal=0,dia=0,diaVal=0,diaNo=0;
    // int row1[]=new int[3],clm1[]=new int[3];
    // int[] dia1 = new int[3];
@@ -410,11 +413,12 @@ public class MainWindow extends JFrame {
 				cells[2][1].setStatus(true);
 				cells[2][1].setValue(status);
 				if(mode!=2){
-					checkCells();
-					setComputerValue();
+					
 					btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -442,8 +446,8 @@ public class MainWindow extends JFrame {
 					btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
 					lblPlayer1.setEnabled(false);
 					lblPlayer2.setEnabled(true);
-					lblPlayer1.setEnabled(false);
-					lblPlayer2.setEnabled(true);
+					checkCells();
+					setComputerValue();
 				}else{
 					if(status==1){
 						btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
@@ -580,8 +584,9 @@ public class MainWindow extends JFrame {
                 {
                     cells[row][i].setStatus(true);
                     cells[row][i].setValue(-1);
-                    cells[row][i].getButton().setText("-1**");
-                    System.out.println("1");
+                    cells[row][i].getButton().setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					lblPlayer1.setEnabled(true);
+					lblPlayer2.setEnabled(false);
                     break;
                 }
             }

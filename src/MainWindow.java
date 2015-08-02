@@ -96,6 +96,7 @@ public class MainWindow extends JFrame {
 		contentPane.add(btn1_3);
 		
 		JButton btn1_2 = new JButton("");
+		
 		btn1_2.setBackground(Color.WHITE);
 		btn1_2.setContentAreaFilled(false);
 		btn1_2.setFocusPainted(false);
@@ -106,15 +107,50 @@ public class MainWindow extends JFrame {
 		contentPane.add(btn1_2);
 		
 		JButton btn1_1 = new JButton("");
+		
 		btn1_1.setBackground(Color.WHITE);
-		btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+		
 		
 		btn1_1.setBackground(Color.WHITE);
 		btn1_1.setContentAreaFilled(false);
 		btn1_1.setFocusPainted(false);
 		btn1_1.setBorder(emptyBorder);
 		
+		btn1_3.setBackground(Color.WHITE);
+		btn1_3.setContentAreaFilled(false);
+		btn1_3.setFocusPainted(false);
+		btn1_3.setBorder(emptyBorder);
 		
+		btn2_1.setBackground(Color.WHITE);
+		btn2_1.setContentAreaFilled(false);
+		btn2_1.setFocusPainted(false);
+		btn2_1.setBorder(emptyBorder);
+		
+		btn2_2.setBackground(Color.WHITE);
+		btn2_2.setContentAreaFilled(false);
+		btn2_2.setFocusPainted(false);
+		btn2_2.setBorder(emptyBorder);
+		
+		btn2_3.setBackground(Color.WHITE);
+		btn2_3.setContentAreaFilled(false);
+		btn2_3.setFocusPainted(false);
+		btn2_3.setBorder(emptyBorder);
+		
+		
+		btn3_1.setBackground(Color.WHITE);
+		btn3_1.setContentAreaFilled(false);
+		btn3_1.setFocusPainted(false);
+		btn3_1.setBorder(emptyBorder);
+		
+		btn3_2.setBackground(Color.WHITE);
+		btn3_2.setContentAreaFilled(false);
+		btn3_2.setFocusPainted(false);
+		btn3_2.setBorder(emptyBorder);
+		
+		btn3_3.setBackground(Color.WHITE);
+		btn3_3.setContentAreaFilled(false);
+		btn3_3.setFocusPainted(false);
+		btn3_3.setBorder(emptyBorder);
 		
 		btn1_1.setBounds(156, 100, 83, 59);
 		contentPane.add(btn1_1);
@@ -146,15 +182,21 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				cells[0][0].setStatus(true);
 				cells[0][0].setValue(status);
-				btn1_1.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				//btn1_1.setText(status+"//");
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn1_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-			//	status=(status==1?-1:1);
-				
-				
-				
-				//checkCells();
 				
 			
 			}
@@ -164,11 +206,22 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				cells[0][1].setStatus(true);
 				cells[0][1].setValue(status);
-				btn1_2.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				//btn1_2.setText(status+"//");
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn1_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
+				
 				
 			}
 		});
@@ -177,11 +230,22 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				cells[0][2].setStatus(true);
 				cells[0][2].setValue(status);
-				btn1_3.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				//btn1_3.setText(status+"//");
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn1_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
+				
 				
 				
 			}
@@ -192,11 +256,21 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				cells[1][0].setStatus(true);
 				cells[1][0].setValue(status);
-				btn2_1.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn2_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
+				
 			
 			}
 		});
@@ -205,11 +279,20 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				cells[1][1].setStatus(true);
 				cells[1][1].setValue(status);
-				btn2_2.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn2_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
 			}
 		});
 		
@@ -217,11 +300,20 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				cells[1][2].setStatus(true);
 				cells[1][2].setValue(status);
-				btn2_3.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn2_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
 				
 			}
 		});
@@ -231,11 +323,20 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				cells[2][0].setStatus(true);
 				cells[2][0].setValue(status);
-				btn3_1.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn3_1.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
 			
 			}
 		});
@@ -244,11 +345,21 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				cells[2][1].setStatus(true);
 				cells[2][1].setValue(status);
-				btn3_2.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn3_2.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
+			
 			}
 		});
 		
@@ -256,11 +367,21 @@ public class MainWindow extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				cells[2][2].setStatus(true);
 				cells[2][2].setValue(status);
-				btn3_3.setText(status+"//");
-				checkCells();
-				setComputerValue();
+				if(mode!=2){
+					checkCells();
+					setComputerValue();
+					btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+				}else{
+					if(status==1){
+						btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_adace89226ae137e-1.png")));
+					}else{
+						btn3_3.setIcon(new ImageIcon(MainWindow.class.getResource("/img/o_8e5d48e025f74fcf-1.png")));
+					}
+					status=(status==1?-1:1);
+				}
+				
 				checkWinner();
-				//status=(status==1?-1:1);
+			
 			}
 		});
 		
